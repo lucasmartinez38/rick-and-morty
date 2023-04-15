@@ -1,0 +1,190 @@
+.body{
+    width: 100%;
+    height: 1000px;
+    background: #a736e4;
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.git__bash{
+    width: 80%;
+    height: 60%;
+    justify-content: center;
+    margin-top: 80px;
+    
+}
+.nav{
+    width: 100%;
+    height: 40px;
+    background: #e4e1e1;
+    display: flex;
+    align-items: center;
+    
+}
+.nav h2{
+
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: .5;
+    margin-top: 12px;
+    font-size: 20px;
+    margin-left: 10px;
+    letter-spacing: 1px;
+}
+.div__icons{
+    text-align: right;
+    width: 100%;
+    float: right;
+    
+}
+.icons{
+    
+    opacity: .4;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+    margin-top: 6px;
+    cursor: pointer;  
+}
+
+
+.consola{
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+}
+.menu {
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: #2ebd12;
+}
+.menu h2{
+    font-size: 22px;
+}
+
+.menu__skills{
+    margin-top: 450px;
+    margin-left: 10px;
+    font-size: 14.7px;
+    color: #2ebd12;
+}
+.menu__two{
+ color: rgb(129, 31, 138);
+}
+.menu__three{
+ color: rgb(163, 163, 13);
+}
+
+/* menu habilidades */
+
+
+.habilidades{
+    margin-top: 40px;
+    font-size: 20px;
+    color: #2ebd12;
+}
+
+.skills__container{
+    text-align: center;
+    padding: 30px;
+}
+.skills__container .skill{
+    max-width: 650px;
+    margin: 30px auto;
+}
+.skills__container .skill .info{
+    display: flex;
+    justify-content: space-between;
+}
+.skills__container .skill .lista {
+    display: inline-block;
+    margin-right: 20px;
+    height: 10px;
+    width: 10px;
+    background-color: #e4e1e1;
+}
+.skills__container .skill .barra{
+    background-color: #a736e4;
+    width: 100%;
+    height: 7px;
+    margin: 10px 0;
+}
+/* html 90 */
+.skills__container .skill .barra {
+    background-color: #2ebd12;
+    width: 90%;
+    height: 7px;
+    animation: progreso1 2s forwards;
+}
+/* 70 */
+.skills__container .skill .barra {
+    background-color: #2ebd12;
+    width: 70%;
+    height: 7px;
+    animation: progreso2 2s forwards;
+}
+
+/* 80 */
+.skills__container .skill .barra {
+    background-color: #2ebd12;
+    width: 80%;
+    height: 7px;
+    animation: progreso3 2s forwards;
+}
+/* 85 */
+.skills__container .skill .barra {
+    background-color: #2ebd12;
+    width: 85%;
+    height: 7px;
+    animation: progreso4 2s forwards;
+}
+
+/* .skill .info p{
+    color: #a736e4;
+    font-size: 28px;
+}
+.skill .info .porcentaje{
+    color: #a736e4;
+    font-size: 20px;
+}
+
+ @keyframes progreso1{
+    to{
+        width: 0;
+    }
+    100%{
+        width: 90%;
+    }
+}
+@keyframes progreso2{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 70%;
+    }
+}
+@keyframes progreso3{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 80%;
+    }
+}
+@keyframes progreso4{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 85%;
+    }
+} 
+  */
+ 

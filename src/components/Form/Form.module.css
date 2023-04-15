@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto&family=Rock+Salt&display=swap');
+
+.body {
+  display: flex;
+  justify-content: right;
+  min-height: 100vh;
+  background: url('../../img/backgroundLanding.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hello{
+  margin-top: 200px;
+  margin-right: 300px;
+ display: table;
+}
+
+
+
+
+
+
+
+
+.half {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 50%;
+}
+
+.form{
+  color: white;
+}
+
+.img {
+  width: 26px;
+  height: 26px;
+}
+
+.wraper {
+  position: relative;
+  width: 450px;
+  height: 640px;
+  background: #a736e43a;
+
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  border-top: solid 1px  rgb(123, 11, 208);
+  border-left: solid 1px  rgb(123, 11, 208);
+  box-shadow: 8px 8px 16px 6px rgba(123, 11, 208, 0.426);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+/* .wraper:hover{
+  transform: scale(1.1);
+  transition: .7s ease;
+} */
+
+
+
+.wraper .form_box {
+  width: 95%;
+  height: 95%;
+  padding: 10px;
+}
+
+.form_box h1{
+  
+  font-family: 'Creepster', cursive, sans-serif, Georgia, 'Times New Roman', Times, serif;
+  color: rgb(63, 0, 139);
+  text-shadow: 10px 8px 10px #4a1d88;
+  letter-spacing: 8px;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.form_box h1:hover{
+
+    transform: scale(1.1);
+    cursor: pointer;
+    letter-spacing: 8px;
+    text-shadow: 18px 3px 31px #380375;
+    transition: .9s ease;
+   
+}
+
+
+/* .wraper .form_box.login {
+  display: none;
+} */
+
+.wraper .form_box.register {
+  position: absolute;
+  transform: translateX(400px);
+}
+
+.form__container{
+  height: 380px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.wraper .icon_close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 48px;
+  background: rgb(63, 0, 139);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.wraper .icon_close:hover{
+  cursor: pointer;
+  transform: scale(1.24);
+  transition: .5s ease;
+
+}
+
+.form_box h2 {
+  font-family: 'Creepster', cursive, sans-serif, Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  color: rgb(63, 0, 139);
+  text-shadow: 10px 8px 10px #4a1d88;
+  font-size: 45px;
+  font-weight: 5px;
+  letter-spacing: 4px;
+  margin-bottom: -15px;
+  
+}
+.form_box h2:hover{
+  transform: scale(1.15);
+  cursor: pointer;
+  letter-spacing: 6px;
+  text-shadow: 20px 5px 10px #380375;
+  transition: .9s ease;
+}
+
+.input_box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 40px 0;
+  border-radius: 15px;
+}
+
+.input_box label {
+  position: absolute;
+  font-family: 'Creepster', cursive;
+  letter-spacing: 2px; 
+  border-radius: 15px;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  font-size:24px;
+  color: rgb(63, 0, 139);
+ 
+}
+.forms__input{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 2rem;
+  margin-top: 55px;
+  border-radius: 15px; 
+  background: none;
+  outline: none;
+  font-size: 20px;
+  
+}
+.forms__input:hover+.form__label{
+
+  transform: translateY(-50px);
+  transition: .5s;
+  font-size: 30px;
+}
+.forms__input:focus+.form__label{
+
+  transform: translateY(-44px);
+  transition: .5s ease;
+  font-size: 26px;
+}
+
+
+
+
+
+.input_box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  
+  font-size: 2em;
+  padding: 0 35px 0 5px;
+}
+
+.input_box input:-webkit-autofill {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.input_box .icon {
+  position: absolute;
+  right: 12px;
+  line-height: 57px;
+}
+
+.remember_forgot {
+  font-size: .9em;
+  color:  rgb(69, 49, 92);
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+}
+
+.remember {
+  color: rgb(63, 0, 139);
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.remember_forgot a {
+  color: rgb(63, 0, 139);
+  text-decoration: none;
+}
+
+.remember_forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: rgb(63, 0, 139);
+  border: none;
+  margin-top: 15px;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+
+.btn:active {
+  transform: scale(1);
+  background-color: rgb(63, 0, 139);
+  color: #ffffff78;
+}
+
+.login_register {
+  font-size: .9em;
+  color: rgb(63, 0, 139);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0 10px;
+}
+
+
+.login_register p a {
+  color: rgb(63, 0, 139);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.login_register p a:hover {
+  text-decoration: underline;
+}
+
+p {
+  
+  color: rgb(63, 0, 139);
+  font-size: 18px;
+  transition: 0.2s;
+  
+}
