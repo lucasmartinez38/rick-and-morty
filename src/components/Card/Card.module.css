@@ -1,9 +1,8 @@
 
 .body{
     margin: 0;
-    padding: 0;
-    display: flex;
-    background-image: url("../../img/FondoHome.jpg");
+    padding: 0;  
+
     
     
     
@@ -14,10 +13,11 @@
     
     translate: 0;
     width: 400px;
-    height: 300px;
+    height: 255px;
     margin-top: 20px;
     margin-left: 20px;
     margin-right: 0;
+    opacity: .8;
     
 
 }
@@ -29,7 +29,7 @@
     overflow: hidden;
     backface-visibility: hidden;
     border-radius: 80px 0px;
-    transition: 1s;
+    transition: .8s;
 }
 .img__front{
     width: 100%;
@@ -40,23 +40,23 @@
 .front{
     transform: perspective(600px) rotateY(0deg);
    
-    padding: 5px;
+    padding: 4px;
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    box-shadow: 0 8px 10px #8e8e8e;
+    box-shadow: 5px 8px 10px #072b77c1;
 
 }
 .back{
     position: absolute;
     transform: perspective(600px) rotateY(180deg);
-    background-color: rgb(100, 12, 158);
+    background-color: rgba(100, 12, 158, 0.409);
     border: solid 2px rgb(54, 52, 52);
     padding: 5px; 
     flex-direction: column;
     justify-content: space-between;
-
-    box-shadow: 0 8px 10px #474646;
+    border: solid 2px rgb(54, 52, 52);
+    box-shadow: 0 8px 10px #092c77e2;
 
 }
 .img__back{
@@ -64,9 +64,12 @@
     max-height: 160px;
     border-radius: 65px 0 0;
     margin-left: 12px;
-    margin-top: 12px;
-    box-shadow: .2px 1px 10px 2px #fff1f1 ;
-   
+    margin-top: 7px;
+ 
+    
+
+    padding: 2px 0 2px 1.7px;
+    box-shadow: .2px 1px 10px 2px #082667 ;
 }
 
 .card:hover .front{
@@ -74,4 +77,66 @@
 }
 .card:hover .back{
     transform:perspective(600px) rotateY(360deg);
+}
+.btn__detail h4{
+    display: flex;
+    color: rgb(183, 21, 21);
+    margin: 6px;
+
+}
+
+
+.btn__detail{
+    margin-top: 34px;
+    margin-left: 3px;
+    background-color: transparent;
+    /* border-radius: 0px 18px 0% 0%; */
+    display: flex;
+    position:fixed;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+}
+.btn__fav{
+    background-color: transparent;
+    border-radius: 0px 18px 0% 0%;
+    display: flex;
+    position:fixed;
+    text-align: center;
+    margin-left: 110px;
+    margin-top: 34px;
+    font-size: 25px;
+    width: 53px;
+    height: 42.6px;
+
+}
+.message{
+    margin-left: 185px;
+    margin-top: -80px;
+    font-size: 20px;
+    color: aliceblue;
+    display: flex;
+}
+.messageE{
+    margin-left: 185px;
+    margin-top: -60px;
+    font-size: 19px;
+    color: aliceblue;
+    display: flex;
+}
+.nav__det{
+    list-style: none;
+    text-decoration:none;
+}
+.btn__close{
+    
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    margin-top: 2px;
+    font-size: 22px;
+    margin-left: 183px;
+    border-radius: 0 0 0 50%;
+    background-color: transparent;
+    color: rgb(183, 21, 21);
 }

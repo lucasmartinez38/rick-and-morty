@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react';
+import style from'./Detail.module.css'
 
 const URL_BASE = 'https://be-a-rym.up.railway.app/api/character/';
 const API_KEY = '373a712eb6cf.c55d560296bcfb1b20a3';

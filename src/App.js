@@ -2,7 +2,7 @@ import './App.css';
 import Cards from './components/Cards/Cards.jsx';
 import Nav from './components/Nav/Nav.';
 import About from './components/About/About.jsx';
-import Detail from './components/Detail';
+import Detail from './components/Detail//Detail';
 import Form from './components/Form/Form';
 import NotFound from './components/NotFound';
 import Favorites from './components/Favorites/Favorites';
@@ -14,11 +14,8 @@ import { useNavigate, useLocation, Routes, Route } from 'react-router-dom';
 
 
 
-// Antigua
-// const URL_BASE = 'https://rickandmortyapi.com/api/character/';
-// const API_KEY = '373a712eb6cf.c55d560296bcfb1b20a3';
 
-// Actual
+
 const URL_BASE = 'https://be-a-rym.up.railway.app/api/character/';
 const API_KEY = 'df25acae57c8.d39db91b2d150641b500';
 

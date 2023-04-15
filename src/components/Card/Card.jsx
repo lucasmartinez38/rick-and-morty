@@ -16,7 +16,7 @@ function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myF
       }
       else {
          setIsFav(true);
-         addFav( { id, name, species, gender,image, onClose })
+         addFav( { id, name, species, image, onClose })
       }
    }
    
@@ -40,7 +40,14 @@ function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myF
                      </div>
                      <div className={`${style.face} ${style.back}`}>
                      <img className={style.img__back} src={image} alt={name} />
-                      <NavLink to={`/detail/${id}`}><h4>Detail</h4></NavLink> 
+                     
+                     <button className={style.btn__detail} >
+                        <NavLink className={style.nav__det}  to={`/detail/${id}`}><h4>Detail</h4></NavLink> 
+                     </button>
+                     <button className={style.btn__fav} onClick={handleFavorite}>{ isFav ? '❤️' : '🤍' }</button>
+                     <button className={style.btn__close} onClick={() => onClose(id)}>X</button>
+                     <p className={style.messageE}>Specie: {species}</p>
+                     <p className={style.message}>Name: {name}</p>
                </div>
          </div>   
 
