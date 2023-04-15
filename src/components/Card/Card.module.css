@@ -49,7 +49,7 @@
 }
 .back{
     position: absolute;
-    transform: perspective(600px) rotateY(0deg);
+    transform: perspective(600px) rotateY(180deg);
     background-color: rgb(100, 12, 158);
     border: solid 2px rgb(54, 52, 52);
     padding: 5px; 
@@ -69,9 +69,9 @@
    
 }
 
-/* .card:hover .front{
+.card:hover .front{
     transform:perspective(600px) rotateY(180deg);
 }
 .card:hover .back{
     transform:perspective(600px) rotateY(360deg);
-} */
+}

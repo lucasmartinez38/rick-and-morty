@@ -32,23 +32,23 @@ function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myF
    return (
 
       <div>
-
-      
-            <div  className={style.body}></div>
+                  <div  className={style.body}></div>
+               
                <div className={style.card}>
-                  <div className={`${style.face} ${style.front}`}>
-                     <img className={style.img__front} src={image} alt={name} />
-                  </div>
-               <div className={`${style.face} ${style.back}`}>
+                     <div className={`${style.face} ${style.front}`}>
+                        <img className={style.img__front} src={image} alt={name} />
+                     </div>
+                     <div className={`${style.face} ${style.back}`}>
                      <img className={style.img__back} src={image} alt={name} />
-                  <NavLink to={`/detail/${id}`}><h4>Detail</h4></NavLink> 
-            </div>
+                      <NavLink to={`/detail/${id}`}><h4>Detail</h4></NavLink> 
+               </div>
+         </div>   
 
       </div>
 
 
 
-            {/* <div class="carta-box">
+            /* <div class="carta-box">
                <div class="carta">    
                <div class="cara">
                <img src={image} alt={name} />
@@ -61,11 +61,10 @@ function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myF
                </div>    
                </div>
                </div>
-            */}
+            */
       
 
 
-         </div>   
 
                         
                   
