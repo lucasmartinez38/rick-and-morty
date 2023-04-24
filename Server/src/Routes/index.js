@@ -1,12 +1,12 @@
 const { login } = require('../Controllers/login');
-const {getCharById} = require('../Controllers/getCharById');
+const getCharById = require('../Controllers/getCharById');
 const { postFav , deleteFav } = require('../Controllers/handlerFavorites');
 //////////////////////////////////////////////////
 const router = require('express').Router();
-///////////////////////////////////////////////////
-router.get('/character/:id', (req, res ) => {
+///////////////////////////////////////////////////git stt
+router.get('/character/:id', (req, res) => {
     getCharById(req, res);
-})
+});
 ///////////////////////////////////////////////////
 router.get('/login', (req, res) => {
     login(req, res);

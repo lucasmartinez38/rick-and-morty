@@ -1,9 +1,11 @@
 
 
+
 const users = require('../Utils/users')
 ///////////////////////////////////////
 const login = ( req, res ) => {
     const {email, password} = req.query;
+    ///////////////////////////////////////////////
     const userFound = users.find((user) => 
     user.email === email && user.password === password)
     ///////////////////////////////////////////////
