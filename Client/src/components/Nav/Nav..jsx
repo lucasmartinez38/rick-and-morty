@@ -25,7 +25,7 @@ const Nav = ({ onSearch, logout }) => {
             <NavLink className='Link' to='!#'>Random</NavLink>
           </li>
           <li>
-          <NavLink className='Link' to='/favorites'>Favorites</NavLink>
+          <NavLink className='Link' to='/fav'>Favorites</NavLink>
           </li>
         </ul>
       </nav>

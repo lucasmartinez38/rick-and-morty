@@ -1,4 +1,3 @@
-import { useDispatch } from "react-redux";
 import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./action-types";
 
 

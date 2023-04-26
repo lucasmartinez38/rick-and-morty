@@ -7,9 +7,7 @@ import { useState } from "react";
 
 
 const Favorites = ({ myFavorites }) => {
-    // const [filter, setFilter] = useState('all')
-    // const [order, setOrder] = useState('asc')
-    // const [filteredCards, setFilteredCards] = useState([])
+
     
     const dispatch = useDispatch()
     const [aux, setAux] = useState(false)
