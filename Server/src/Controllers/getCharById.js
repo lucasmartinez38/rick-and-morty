@@ -1,33 +1,33 @@
 //////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
-const URL = "https://rickandmortyapi.com/api/character/";
-// const URL = 'https://be-a-rym.up.railway.app/api/character';
-// const KEY = 'df25acae57c8.d39db91b2d150641b500';
+// const URL = "https://rickandmortyapi.com/api/character/";
+const URL = 'https://be-a-rym.up.railway.app/api/character';
+const KEY = 'df25acae57c8.d39db91b2d150641b500';
 const axios = require('axios');
 ///////////////////////////////////////////////
-const getCharById = (req, res) => {
-  
-  const { id } = req.params;
-    axios(`${URL}/${id}`)
-    // .get(`${URL}/${id}?key=${KEY}`)
-    .then(response => response.data)
-    .then(({status, name, species, origin, image, gender}) => {
-      if(name){
+const getCharById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { data } = await axios(`${URL}/${id}?key=${KEY}`)
+    
+    // if (!data.name) throw Error(`ID: ${id} Not Found`);
+      
         const character = {
-          id,
-          name,
-          species,
-          origin,
-          image,
-          gender,
-          status
+          id: data.id,
+          name: data.name,
+          species: data.species,
+          origin: data.origin,
+          image: data.image,
+          gender: data.gender,
+          status: data.status,
         }
         return res.status(200).json(character);
-      }
-      // console.log(character);
-      return res.status(404).send('Not Found');
-    })
-    .catch(error => res.status(500).send(error.message));
+      
+   } catch (error) {
+      return error.message.includes('not faund')
+        ? res.status(404).send(error.message)
+        : res.status(500).send(error.response.data.error)
+  }
 };
 //////////////////////////////////////////////
 module.exports = getCharById;

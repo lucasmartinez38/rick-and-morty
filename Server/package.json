@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/index.js"
+    "start": "nodemon ./src/index.js",
+    "jest":
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
     "axios": "^1.3.6",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.22"
   }
 }

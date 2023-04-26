@@ -2,12 +2,14 @@ const express = require("express");
 const server = express();
 const router = require("./Routes/index");
 const PORT = 3001;
+const morgan = require('morgan')
 ///////////////////////////////////
 // const getCharById = require('./Controllers/getCharById')
 // const getCharDetail = require('./Controllers/getCharDetail')
 //////////////////////////////////////////////////
 //middelware
 server.use(express.json());
+server.use(morgan('dev'))
 //////////////////////////////////
 server.use((_req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");

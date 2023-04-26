@@ -1,4 +1,4 @@
-const { login } = require('../Controllers/login');
+const login = require('../Controllers/login');
 const getCharById = require('../Controllers/getCharById');
 const { postFav , deleteFav } = require('../Controllers/handlerFavorites');
 //////////////////////////////////////////////////
@@ -12,7 +12,7 @@ router.get('/login', (req, res) => {
     login(req, res);
 })
 ///////////////////////////////////////////////////
-router.post("/fav", (req, res) => {
+router.post('/fav', (req, res) => {
     postFav(req, res);
 });
 ///////////////////////////////////////////////////
