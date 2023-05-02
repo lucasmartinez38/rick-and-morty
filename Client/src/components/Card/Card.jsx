@@ -16,12 +16,13 @@ function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myF
       }
       else {
          setIsFav(true);
-         addFav( { id, name, species, image, onClose })
+         addFav( { id, name, species, image,gender, onClose })
       }
+      // console.log(handleFavorite);
    }
    
    useEffect(() => {
-      myFavorites.forEach((fav) => {
+      myFavorites.map((fav) => {
          if (fav.id === id) {
             setIsFav(true);
          }
@@ -31,10 +32,10 @@ function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myF
    
    return (
 
-      <div>
-                  <div  className={style.body}></div>
+      <div key={id}>
+         <div  className={style.body}></div>
                
-               <div className={style.card}>
+            <div className={style.card}>
                      <div className={`${style.face} ${style.front}`}>
                         <img className={style.img__front} src={image} alt={name} />
                      </div>
@@ -52,31 +53,7 @@ function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myF
          </div>   
 
       </div>
-
-
-
-            /* <div class="carta-box">
-               <div class="carta">    
-               <div class="cara">
-               <img src={image} alt={name} />
-               </div>
-               <div class="cara detras">      
-               <button className={style.btn} onClick={() => onClose(id)}>X</button>
-               <p className={style.message}>Name: {name}</p>
-               <button onClick={handleFavorite}>{ isFav ? '❤️' : '🤍' }</button>   
-                        
-               </div>    
-               </div>
-               </div>
-            */
-      
-
-
-
-                        
-                  
-          
-      
+  
    )
 } 
 
@@ -95,5 +72,6 @@ const mapDispatchToProps =(dispatch) =>{
 }
 export default connect(
    mapStateToProps,
-   mapDispatchToProps
+   mapDispatchToProps,
+   
 )(Card);

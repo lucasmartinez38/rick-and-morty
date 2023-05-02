@@ -32,21 +32,22 @@ function Detail() {
       <div className={style.Conteiner__detail}>
           <div className={style.btn__cont}>
 
+          </div>
+
+          <div className={style.detail}>
+          <h4>Name: <span>{character?.name}</span></h4>
+          <h4>Status: <span>{character?.status}</span></h4>
+          <h4>Species: <span>{character?.species}</span></h4>
+          <h4>Gender: <span>{character?.gender}</span></h4>
+          <h4>Origin: <span>{character?.origin?.name}</span></h4>
+          </div>
+      </div>
           <button className={style.btn__home}>
               <NavLink className={style.nav} to='/home'>
                 <p className={style.back}>Back</p>
               </NavLink>
           </button>
-          </div>
 
-          <div className={style.detail}>
-          <h4>Name: {character?.name}</h4>
-          <h4>Status: {character?.status}</h4>
-          <h4>Species: {character?.species}</h4>
-          <h4>Gender: {character?.gender}</h4>
-          <h4>Origin: {character?.origin?.name}</h4>
-          </div>
-      </div>
     </div>
 
   )

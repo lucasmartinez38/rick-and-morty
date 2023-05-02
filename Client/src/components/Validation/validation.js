@@ -4,7 +4,7 @@ const validation = (userData) => {
   
   // Email validations
   if (!/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/.test(userData.email)) {
-    errors.email = 'Por favor, revisa tu email rey/reina';
+    errors.email = 'Por favor, revisa tu email';
   };
 
   if (!userData.email) {

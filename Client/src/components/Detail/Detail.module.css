@@ -3,29 +3,50 @@
 
 
 .Conteiner{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
-    padding: 4px;
-    background-color: rgba(100, 12, 158, 0.409);
-    justify-content: center;
-    text-align: center;
-    box-shadow: 15px 15px 10px #072b77c1;
-    border: solid 2px  rgb(54, 52, 52);
     width: 700px;
     height: 455px;
+    padding: 4px;
+    background-color: rgba(100, 12, 158, 0.409);
+    justify-content: space-between;
+    /* text-align: center; */
+    box-shadow: 15px 15px 10px #072b77c1;
+    border: solid 2px  rgb(54, 52, 52);
     margin-top: 100px;
     margin-left: 50px;
     border-radius: 130px 0px;
    
     opacity: .8;
 }
-
+.back {
+    /* position: absolute; */
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    font-size: 22px;
+    color: red;
+    padding: 5px;
+}
+.btn__home {
+    /* margin-left: 15px; */
+        position: relative;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 45px;
+    border-radius: 0 0 0 30px;
+    background-color: transparent;
+    /* position: absolute; */
+}
 
 .Conteiner__image{
     margin-top: 3px;
-    margin-left: -138px;
+   
     border-radius: 118px 0px 0;
-    position: relative;
+    
     display: flex;
     width: 300px;
     height: 310px;
@@ -36,48 +57,25 @@
 .Conteiner__image img{
     
     margin: 0 auto;
-    position: absolute;
+    /* position: absolute; */
     border-radius: 126px 0px 0;
     height: 300px;
     width: 300px;
 }
 
-
-
-
-.btn__cont{
-    display: flex;
-    position: relative;
-    
-    float: right;
-}
-
-.btn__home{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 48px;
-    width: 90px;
-    height: 45px;
-    border-radius: 0 0 0 30px ;
-    background-color: transparent;  
-    position: absolute; 
-}
-.back{
-    text-decoration: none;
-    list-style: none;
-    font-size: 25px;
-    color:red;
-}
 .nav{
     text-decoration: none;
 }
 .detail{
-    font-size: 30px;
-    margin-top:50px ;
-    margin-left: 20px ;
     
+    margin-top:50px ;
+    margin-left: 5px ;  
 }
 .detail h4{
+    font-size: 27px;
+    color: red;
+}
+.detail h4 span {
+    font-size: 27px;
     color: aliceblue;
 }

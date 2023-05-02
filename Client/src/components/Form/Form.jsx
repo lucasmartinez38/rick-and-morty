@@ -36,7 +36,7 @@ function InitialPage({ login }) {
       <div className={style.half}>
         <div className={style.form}>
           <div className={style.wraper}>
-            <span className={style.icon_close}><img className={style.img} src={require('../../img/cerrar.png')} alt='Icono cerrar'/></span>
+            {/* <span className={style.icon_close}><img className={style.img} src={require('../../img/cerrar.png')} alt='Icono cerrar'/></span> */}
 
             <div className={`${style.form_box} ${style.login}`}>
               <h1>Rick And Morty</h1>

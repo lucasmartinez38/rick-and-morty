@@ -10,7 +10,7 @@ const Favorites = ({ myFavorites }) => {
 
     
     const dispatch = useDispatch()
-    const [aux, setAux] = useState(false)
+    const [_aux, setAux] = useState(false)
     
     
     // 
@@ -40,18 +40,19 @@ const Favorites = ({ myFavorites }) => {
             </select>
             {
                 myFavorites.map((fav) => {
+                    // console.log("favorites",fav);
                     return (
                         <Card
-                            onClose={fav.onClose}
-                            key={fav.id}
-                            id={fav.id}
-                            name={fav.name}
-                            especies={fav.especies}
-                            gender={fav.gender}
-                            image={fav.image}
+                        // onClose={fav.onClose}
+                        key={fav.id}
+                        id={fav.id}
+                        name={fav.name}
+                        especies={fav.especies}
+                        gender={fav.gender}
+                        image={fav.image}
                         />
-                    )
-                })
+                        )
+                    })
             }
 
 

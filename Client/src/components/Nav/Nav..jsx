@@ -2,7 +2,7 @@ import style from'./Nav.module.css'
 import SearchBar from '../SearchBar/SearchBar.jsx';
 import { NavLink } from "react-router-dom";
 
-const Nav = ({ onSearch, logout }) => {
+const Nav = ({ onSearch, logout }) => { 
   return (
     <div className={style.header}>
       <div className={style.logo}>

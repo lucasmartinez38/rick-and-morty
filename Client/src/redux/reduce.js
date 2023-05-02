@@ -1,9 +1,5 @@
 import { ADD_FAV, REMOVE_FAV, FILTER, ORDER } from "./action-types";
 
-
-
-
-
 const initialState = {
     myFavorites: [],
     allCharactersFav: [],
@@ -14,10 +10,11 @@ const initialState = {
 const reducer = (state = initialState, { type, payload }) => {
     switch(type) {
         case ADD_FAV:
+            
                 return {
                   ...state,
                   myFavorites: payload,
-                  allCharacters: payload,
+                  allCharacters:payload,
                 };
             
         case REMOVE_FAV:

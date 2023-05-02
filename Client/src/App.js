@@ -13,8 +13,8 @@ import { useNavigate, useLocation, Routes, Route } from "react-router-dom";
 // const URL_BASE = 'https://be-a-rym.up.railway.app/api/character/';
 // const API_KEY = 'df25acae57c8.d39db91b2d150641b500';
 
-const EMAIL = "lukitas@gmail.com";
-const PASSWORD = "123asd";
+// const EMAIL = "lukitas@gmail.com";
+// const PASSWORD = "123asd";
 const URL = "http://localhost:3001/rickandmorty/login/";
 
 function App() {
@@ -26,9 +26,7 @@ function App() {
   const login = async (userData) => {
     try {
       const { email, password } = userData;
-      const { data } = await axios(
-        URL + `?email=${email}&password=${password}`
-      );
+      const { data } = await axios(URL + `?email=${email}&password=${password}`);
       const { access } = data;
       setAccess(access);
       access && navigate("/home");
@@ -48,9 +46,7 @@ function App() {
   ///////////////////////////////////////////////////////////////////
   const onSearch = async (id) => {
     try {
-      const { data } = await axios(
-        `http://localhost:3001/rickandmorty/character/${id}`
-      );
+      const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`);
       if (data.name) {
         setCharacters((oldChars) => [...oldChars, data]);
       }

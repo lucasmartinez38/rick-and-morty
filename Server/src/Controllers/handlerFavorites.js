@@ -6,7 +6,8 @@ let myFavorites = [];
 const postFav = (req, res) => {
     try {
         const character = req.body;
-        const characterFound = character.find(fav => fav.id === character.id);
+        const characterFound = myFavorites.find(fav => fav.id === character.id);
+        console.log(character, "Me dio corazon");
         //////////////////////////
         if(characterFound) throw Error("Character repetido")
         //////////////////////////
@@ -20,9 +21,8 @@ const postFav = (req, res) => {
 const deleteFav = (req, res) => {
     const { id } = req.params;
     ///de esta forma se elimina u character de la lista de fav
-    myFavorites = myFavorites.filter((favorite) => favorite.id !== +id);
-    return res.status(200).json(myFavorites);
-      
+    myFavorites = myFavorites.filter((favorite) => favorite.id !== id);
+    return res.status(200).json(myFavorites);     
 }
 ///////////////////////////////////////////////////
 module.exports = {
