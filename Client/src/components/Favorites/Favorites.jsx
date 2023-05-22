@@ -4,28 +4,24 @@ import { filterCards, orderCards } from '../../redux/actions';
 import { useState } from "react";
 
 
-
-
 const Favorites = ({ myFavorites }) => {
 
     
     const dispatch = useDispatch()
-    const [_aux, setAux] = useState(false)
+    const [aux, setAux] = useState(false)
     
     
     // 
     const handleOrder = ( event ) => {
         dispatch( orderCards( event.target.value ))
-        setAux(true)
+        setAux(!aux)
     }
     const handleFilter = ( event ) => {
         dispatch( filterCards( event.target.value ))
     }
 
-
-
     return(
-
+    
         <div>
             <select onChange={handleOrder}>
                 <option value="A">Ascendente</option>
@@ -38,28 +34,24 @@ const Favorites = ({ myFavorites }) => {
                 <option value="unknown">unknown</option>
                 <option value="allCharacters">All Characters</option>
             </select>
-            {
-                myFavorites.map((fav) => {
+            { myFavorites &&
+                myFavorites?.map((fav) => {
                     // console.log("favorites",fav);
+                    // console.log(fav)
                     return (
                         <Card
-                        // onClose={fav.onClose}
                         key={fav.id}
-                        id={fav.id}
-                        name={fav.name}
-                        especies={fav.especies}
-                        gender={fav.gender}
-                        image={fav.image}
+                        id={fav?.id}
+                        name={fav?.name}
+                        especies={fav?.especies}
+                        gender={fav?.gender}
+                        image={fav?.image}
                         />
                         )
-                    })
-            }
-
-
+                    }
+                    )
+                }
         </div>
-
-
-
     )
 }
 

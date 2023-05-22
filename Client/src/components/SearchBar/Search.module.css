@@ -1,11 +1,12 @@
 .searchBar {
-  background: rgba(255, 255, 255, 0.2);
+  background: #a736e440;
   display: flex;
   align-items: center;
   border-radius: 60px;
   height: 55px;
   padding: 15px 6px;
   backdrop-filter: blur(4px) saturate(180%);
+  /* box-shadow: 8px 8px 16px 6px rgba(123, 11, 208, 0.426); */
 }
 
 .searchBar input {

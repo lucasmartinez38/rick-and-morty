@@ -6,7 +6,6 @@ const router = require('express').Router();
 ///////////////////////////////////////////////////
 router.get('/character/:id', (req, res) => {
     getCharById(req, res);
-
 });
 ///////////////////////////////////////////////////
 router.get('/login', (req, res) => {

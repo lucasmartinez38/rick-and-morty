@@ -5,10 +5,10 @@ export default function Cards({ characters, onClose }) {
    return (
       <div  className={style.container}>
          {
-            characters.map(({ id, name, status, species, gender, origin, image }) => {
+            characters.map(({ id, name, status, species, gender, origin, image, key}) => {
                return (
                   <Card
-                  Key = {id}
+                  Key = {id.toString}
                   id = {id}
                   name = {name}
                   status = {status}

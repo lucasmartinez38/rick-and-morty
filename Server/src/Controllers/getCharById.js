@@ -1,18 +1,18 @@
 //////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////
-// const URL = "https://rickandmortyapi.com/api/character/";
-const URL = 'https://be-a-rym.up.railway.app/api/character';
-const KEY = 'df25acae57c8.d39db91b2d150641b500';
+const URL = "https://rickandmortyapi.com/api/character/";
+// const URL = 'https://be-a-rym.up.railway.app/api/character';
+// const KEY = 'df25acae57c8.d39db91b2d150641b500';
 const axios = require('axios');
 ///////////////////////////////////////////////
 const getCharById = async (req, res) => {
   try {
-    //////////////////////////////////////
+    ///////////////////////////////////////////////////////////
     const { id } = req.params;
-    const { data } = await axios(`${URL}/${id}?key=${KEY}`)
+    const { data } = await axios(`${URL}/${id}`)
     /////////////////////////////////////
     if (!data.name) throw Error(`ID: ${id} Not Found`);
-    
+
       const character = {
         id: data.id,
         name: data.name,
@@ -26,7 +26,7 @@ const getCharById = async (req, res) => {
 
    } catch (error) {
       return error.message.includes('Not Found')
-        ? rerres.status(404).send(error.message)
+        ? error.status(404).send(error.message)
         : res.status(500).send(error.response.data.error)
   }
 };

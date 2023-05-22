@@ -15,5 +15,6 @@ export default function SearchBar({ onSearch }) {
             <img src={require('../../img/Search.png')} alt='Logo de la navBar'/>
          </button>
       </div>
+      
    );
 }

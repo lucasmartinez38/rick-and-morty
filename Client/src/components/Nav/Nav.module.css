@@ -1,6 +1,8 @@
 .header {
   /* background-color: transparent; */
-  background-color: #1b3039;
+  box-shadow: 8px 8px 16px 6px rgba(123, 11, 208, 0.426);
+  background: rgba(63, 0, 139, 0.688);
+  opacity: .5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,12 +40,12 @@
 .header .navlinks a {
   font-weight: bold;
   font-size: 700;
-  color: #eceff1;
+  color: #e2e7ea;
   text-decoration: none;
 }
 
 .header .navlinks li a:hover {
-  color: #ffbc0e;
+  color: #8f3bd8;
 }
 
 .header .btn button{

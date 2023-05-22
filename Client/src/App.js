@@ -15,7 +15,7 @@ import { useNavigate, useLocation, Routes, Route } from "react-router-dom";
 
 // const EMAIL = "lukitas@gmail.com";
 // const PASSWORD = "123asd";
-const URL = "http://localhost:3001/rickandmorty/login/";
+const URL = "http://localhost:3001/rickandmorty";
 
 function App() {
   const location = useLocation().pathname;
@@ -26,7 +26,7 @@ function App() {
   const login = async (userData) => {
     try {
       const { email, password } = userData;
-      const { data } = await axios(URL + `?email=${email}&password=${password}`);
+      const { data } = await axios(`${URL}/login/?email=${email}&password=${password}`);
       const { access } = data;
       setAccess(access);
       access && navigate("/home");

@@ -1,39 +1,44 @@
 import style from './Card.module.css'
 import { NavLink } from 'react-router-dom';
 import {addFav, removeFav} from '../../redux/actions';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
+
+// import Favorites from '../Favorites/Favorites';
 
 
 function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myFavorites }) {
+   const dispatch = useDispatch()
 
    //estado local
    const [isFav, setIsFav] = useState(false);
    const handleFavorite = () => {
       if (isFav) {
          setIsFav(false);
-         removeFav(id)
+         dispatch(removeFav(id))
       }
       else {
          setIsFav(true);
-         addFav( { id, name, species, image,gender, onClose })
+         dispatch(addFav( { id, name, species, image,gender }))
       }
-      // console.log(handleFavorite);
+
    }
    
    useEffect(() => {
-      myFavorites.map((fav) => {
+   myFavorites?.map((fav) => {
          if (fav.id === id) {
             setIsFav(true);
          }
+         return myFavorites
       });
-   },[myFavorites]);
+   },[myFavorites, id]);
 
    
    return (
+      
 
-      <div key={id}>
-         <div  className={style.body}></div>
+      <div >
+         <div className={style.body}></div>
                
             <div className={style.card}>
                      <div className={`${style.face} ${style.front}`}>
@@ -51,7 +56,6 @@ function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myF
                      <p className={style.message}>Name: {name}</p>
                </div>
          </div>   
-
       </div>
   
    )
@@ -64,10 +68,11 @@ const mapStateToProps = (state) => {
    }
 }
 
-const mapDispatchToProps =(dispatch) =>{
+const mapDispatchToProps = (dispatch) =>{
    return {
-      addFav: (character) => { dispatch(addFav(character))},
-      removeFav: (id) => { dispatch(removeFav(id)) }
+      addFav: (character) => { 
+         dispatch(addFav(character))},
+      removeFav: (id) => { dispatch(removeFav !== id) }
    }
 }
 export default connect(
