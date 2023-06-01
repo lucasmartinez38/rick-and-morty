@@ -10,7 +10,7 @@ export default function SearchBar({ onSearch }) {
 
    return (
       <div className={style.searchBar}>
-         <input placeholder='Search a character'type='search' onChange={handleChange} value={id} />
+         <input placeholder='Search a character'type='search' name='search' onChange={handleChange} value={id} />
          <button onClick={() => {onSearch(id); setId('')}}>
             <img src={require('../../img/Search.png')} alt='Logo de la navBar'/>
          </button>

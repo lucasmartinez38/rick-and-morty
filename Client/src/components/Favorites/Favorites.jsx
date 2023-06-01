@@ -41,11 +41,11 @@ const Favorites = ({ myFavorites }) => {
                     return (
                         <Card
                         key={fav.id}
-                        id={fav?.id}
-                        name={fav?.name}
-                        especies={fav?.especies}
-                        gender={fav?.gender}
-                        image={fav?.image}
+                        id={fav.id}
+                        name={fav.name}
+                        especies={fav.especies}
+                        gender={fav.gender}
+                        image={fav.image}
                         />
                         )
                     }

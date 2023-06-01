@@ -8,26 +8,26 @@ import { useState, useEffect } from 'react';
 
 
 function Card({ id, name, species, gender,image, onClose, addFav, removeFav, myFavorites }) {
-   const dispatch = useDispatch()
-
+   
    //estado local
    const [isFav, setIsFav] = useState(false);
+
    const handleFavorite = () => {
       if (isFav) {
          setIsFav(false);
-         dispatch(removeFav(id))
+         removeFav(id)
       }
       else {
          setIsFav(true);
-         dispatch(addFav( { id, name, species, image,gender }))
+         addFav( { id, name, species, image, gender  })
       }
 
    }
    
    useEffect(() => {
-   myFavorites?.map((fav) => {
+   myFavorites.map((fav) => {
          if (fav.id === id) {
-            setIsFav(true);
+            setIsFav(true); 
          }
          return myFavorites
       });
@@ -70,9 +70,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) =>{
    return {
-      addFav: (character) => { 
-         dispatch(addFav(character))},
-      removeFav: (id) => { dispatch(removeFav !== id) }
+      addFav: (character) => { dispatch(addFav(character))},
+      removeFav: (id) => { dispatch(removeFav(id)) }
    }
 }
 export default connect(
