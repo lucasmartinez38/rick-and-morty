@@ -36,7 +36,7 @@ function App() {
   const login = async (userData) => {
     try {
       const { email, password } = userData;
-      const { data } = await axios(`${URL}/login/?email=${email}&password=${password}`);
+      const { data } = await axios(`${URL}/login?email=${email}&password=${password}`);
       const { access } = data;
       setAccess(access);
       access && navigate("/home");

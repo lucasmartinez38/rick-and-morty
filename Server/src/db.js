@@ -1,4 +1,4 @@
-const { users, favorites } = require("./models/index");
+const { UsersModels, FavoriteModels } = require("./models/index");
 
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
@@ -13,8 +13,8 @@ const sequelize = new Sequelize(
 
 //////////////////////////   MODELS  ////////////////////////////////
 //debajo de esta linea se ejecutan las funciones de los modelos...
-users(sequelize);
-favorites(sequelize);
+UsersModels(sequelize);
+FavoriteModels(sequelize);
 /////////////////////////  RELACIONES  ///////////////////////////
 //debajo de esta linea se ejecuta la relacion entre las tablas
 const { User, Favorite } = sequelize.models;
@@ -23,5 +23,7 @@ Favorite.belongsToMany(User, { through: "User_Favorite", timestamps: false });
 
 module.exports = {
   ...sequelize.models,
+     User,
+   Favorite,
   conn: sequelize,
 };

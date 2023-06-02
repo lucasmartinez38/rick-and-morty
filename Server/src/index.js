@@ -1,4 +1,4 @@
-const express = require("express");
+ const express = require("express");
 const server = express();
 const router = require("./Routes/index");
 const PORT = 3001;
@@ -27,5 +27,6 @@ server.use("/rickandmorty", router);
 server.listen(PORT, async () => {
   console.log(`Server is running on port ${PORT}`);
   console.log(":Models:", conn.models);
-  await conn.sync({ force: true });
+  await conn.sync({ force: false });
 });
+

@@ -5,18 +5,18 @@ module.exports = (sequelize) => {
     {
       id: {
         type: DataTypes.INTEGER,
-        primaryKey: true,
         allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
       },
       email: {
         type: STRING,
         allowNull: false,
-        // validate:{
-        //     isEmail:true
-        // }
+        unique: true,
+        isEmail: true,
       },
       password: {
-        type: DataTypes.STRING(64),
+        type: DataTypes.STRING,
         allowNull: false,
       },
     },
@@ -24,4 +24,5 @@ module.exports = (sequelize) => {
       timestamps: false,
     }
   );
+    // return User
 };

@@ -2,11 +2,11 @@
 
 
 
-const users = require('./User')
-const favorites = require('./Favorite')
+const UsersModels = require('./User')
+const FavoriteModels = require('./Favorite')
 
 
 module.exports = {
-    users,
-    favorites,
-}
+  UsersModels,
+  FavoriteModels,
+};
